@@ -1,0 +1,67 @@
+{
+    "best_model": "Random Forest",
+    "features": [
+        "loan_amnt",
+        "installment",
+        "annual_inc",
+        "dti",
+        "delinq_2yrs",
+        "inq_last_6mths",
+        "open_acc",
+        "pub_rec",
+        "revol_bal",
+        "total_acc",
+        "int_rate",
+        "revol_util",
+        "term",
+        "grade",
+        "home_ownership",
+        "verification_status",
+        "purpose",
+        "emp_length",
+        "application_type"
+    ],
+    "numeric_features": [
+        "loan_amnt",
+        "installment",
+        "annual_inc",
+        "dti",
+        "delinq_2yrs",
+        "inq_last_6mths",
+        "open_acc",
+        "pub_rec",
+        "revol_bal",
+        "total_acc",
+        "int_rate",
+        "revol_util"
+    ],
+    "categorical_features": [
+        "term",
+        "grade",
+        "home_ownership",
+        "verification_status",
+        "purpose",
+        "emp_length",
+        "application_type"
+    ],
+    "target_mapping": {
+        "Fully Paid": 0,
+        "Charged Off": 1
+    },
+    "selection_metric": "Combined score: 0.5 * mean CV ROC-AUC + 0.5 * OOF F1",
+    "threshold_metric": "Out-of-fold training F1-score",
+    "decision_threshold": 0.4487360744278457,
+    "cv_folds": 5,
+    "random_state": 42,
+    "test_size": 0.2,
+    "training_rows": 30861,
+    "testing_rows": 7716,
+    "test_metrics": {
+        "Accuracy": 0.7095645412130638,
+        "Precision": 0.2635593220338983,
+        "Recall": 0.5528888888888889,
+        "F1 Score": 0.3569583931133429,
+        "ROC-AUC": 0.708529543653804,
+        "Average Precision": 0.287866214390426
+    }
+}
